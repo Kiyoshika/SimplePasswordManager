@@ -1,0 +1,70 @@
+object RootForm: TRootForm
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'Simple Password Manager'
+  ClientHeight = 210
+  ClientWidth = 373
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object TreeCategories: TTreeView
+    Position.X = 8.000000000000000000
+    Position.Y = 65.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 139.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 141.000000000000000000
+    Viewport.Height = 135.000000000000000000
+  end
+  object FormTitle: TLabel
+    StyledSettings = [Family, FontColor]
+    Position.X = 64.000000000000000000
+    Position.Y = -24.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Simple Password Manager'
+    TabOrder = 1
+  end
+  object CategoryTitle: TLabel
+    Position.X = 48.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Categories:'
+    TabOrder = 2
+  end
+  object BtnCreatePassword: TButton
+    Position.X = 161.000000000000000000
+    Position.Y = 114.000000000000000000
+    Size.Width = 204.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Create New Password'
+  end
+  object BtnGeneratePassword: TButton
+    Position.X = 161.000000000000000000
+    Position.Y = 163.000000000000000000
+    Size.Width = 204.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Generate New Password'
+  end
+  object BtnCreateNewCategory: TButton
+    Position.X = 161.000000000000000000
+    Position.Y = 65.000000000000000000
+    Size.Width = 204.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Create New Category'
+  end
+end
