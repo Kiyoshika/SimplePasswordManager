@@ -11,6 +11,9 @@
 #include <FMX.Types.hpp>
 #include <FMX.Controls.Presentation.hpp>
 #include <FMX.StdCtrls.hpp>
+#include <FMX.Menus.hpp>
+
+#include <vector>
 //---------------------------------------------------------------------------
 class TRootForm : public TForm
 {
@@ -21,9 +24,19 @@ __published:	// IDE-managed Components
 	TButton *BtnCreatePassword;
 	TButton *BtnGeneratePassword;
 	TButton *BtnCreateNewCategory;
+	TMenuBar *MenuBar1;
+	TMenuItem *MenuBtnFile;
+	TMenuItem *MenuBtnHelp;
+	TMenuItem *MenuBtnExport;
+	TMenuItem *MenuButtonImport;
+	TButton *BtnRemoveCategory;
+	void __fastcall CreateNewCategory(TObject *Sender);
 private:	// User declarations
+	std::vector<String> CategoryNames;
+    bool CheckCategoryNameExists(const String& CategoryName);
 public:		// User declarations
 	__fastcall TRootForm(TComponent* Owner);
+    void __fastcall AddNewCategory(const String& NewCategoryName);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TRootForm *RootForm;

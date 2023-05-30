@@ -8,6 +8,8 @@
 #include <System.StartUpCopy.hpp>
 //---------------------------------------------------------------------------
 USEFORM("RootUnit.cpp", RootForm);
+USEFORM("NewCategoryDialog.cpp", NewCategoryForm);
+USEFORM("CategoryExistsDialog.cpp", CategoryExistsForm);
 //---------------------------------------------------------------------------
 extern "C" int FMXmain()
 {
@@ -15,6 +17,8 @@ extern "C" int FMXmain()
 	{
 		Application->Initialize();
 		Application->CreateForm(__classid(TRootForm), &RootForm);
+		Application->CreateForm(__classid(TNewCategoryForm), &NewCategoryForm);
+		Application->CreateForm(__classid(TCategoryExistsForm), &CategoryExistsForm);
 		Application->Run();
 	}
 	catch (Exception &exception)
