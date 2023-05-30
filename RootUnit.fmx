@@ -3,26 +3,26 @@ object RootForm: TRootForm
   Top = 0
   BorderStyle = Single
   Caption = 'Simple Password Manager'
-  ClientHeight = 210
-  ClientWidth = 373
+  ClientHeight = 286
+  ClientWidth = 370
+  Position = ScreenCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
   object TreeCategories: TTreeView
     Position.X = 8.000000000000000000
-    Position.Y = 65.000000000000000000
+    Position.Y = 89.000000000000000000
     Size.Width = 145.000000000000000000
-    Size.Height = 139.000000000000000000
+    Size.Height = 186.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     Viewport.Width = 141.000000000000000000
-    Viewport.Height = 135.000000000000000000
+    Viewport.Height = 182.000000000000000000
   end
   object FormTitle: TLabel
     StyledSettings = [Family, FontColor]
     Position.X = 64.000000000000000000
-    Position.Y = -24.000000000000000000
     Size.Width = 249.000000000000000000
     Size.Height = 81.000000000000000000
     Size.PlatformDefault = False
@@ -33,7 +33,7 @@ object RootForm: TRootForm
   end
   object CategoryTitle: TLabel
     Position.X = 48.000000000000000000
-    Position.Y = 40.000000000000000000
+    Position.Y = 64.000000000000000000
     Size.Width = 65.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -41,8 +41,9 @@ object RootForm: TRootForm
     TabOrder = 2
   end
   object BtnCreatePassword: TButton
+    Enabled = False
     Position.X = 161.000000000000000000
-    Position.Y = 114.000000000000000000
+    Position.Y = 185.000000000000000000
     Size.Width = 204.000000000000000000
     Size.Height = 41.000000000000000000
     Size.PlatformDefault = False
@@ -50,8 +51,9 @@ object RootForm: TRootForm
     Text = 'Create New Password'
   end
   object BtnGeneratePassword: TButton
+    Enabled = False
     Position.X = 161.000000000000000000
-    Position.Y = 163.000000000000000000
+    Position.Y = 234.000000000000000000
     Size.Width = 204.000000000000000000
     Size.Height = 41.000000000000000000
     Size.PlatformDefault = False
@@ -60,11 +62,43 @@ object RootForm: TRootForm
   end
   object BtnCreateNewCategory: TButton
     Position.X = 161.000000000000000000
-    Position.Y = 65.000000000000000000
+    Position.Y = 89.000000000000000000
     Size.Width = 204.000000000000000000
-    Size.Height = 41.000000000000000000
+    Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 4
-    Text = 'Create New Category'
+    Text = 'Add New Category'
+    OnClick = CreateNewCategory
+  end
+  object MenuBar1: TMenuBar
+    Size.Width = 370.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    object MenuBtnFile: TMenuItem
+      Text = 'File'
+      object MenuButtonImport: TMenuItem
+        Locked = True
+        Text = 'Import'
+      end
+      object MenuBtnExport: TMenuItem
+        Locked = True
+        Text = 'Export'
+      end
+    end
+    object MenuBtnHelp: TMenuItem
+      Locked = True
+      Text = 'Help'
+    end
+  end
+  object BtnRemoveCategory: TButton
+    Enabled = False
+    Position.X = 161.000000000000000000
+    Position.Y = 137.000000000000000000
+    Size.Width = 204.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'Remove Category'
   end
 end

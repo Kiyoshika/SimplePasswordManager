@@ -1,0 +1,54 @@
+object NewCategoryForm: TNewCategoryForm
+  Left = 0
+  Top = 0
+  Caption = 'New Category Dialog'
+  ClientHeight = 145
+  ClientWidth = 283
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = OnClose
+  DesignerMasterStyle = 0
+  object InputNewCategoryName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 8.000000000000000000
+    Position.Y = 81.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Size, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 267.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'New Category Name:'
+    TabOrder = 3
+  end
+  object CreateCategoryName: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 114.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Create'
+    OnClick = CreateCategory
+  end
+  object Label2: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 33.000000000000000000
+    Size.Width = 267.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'Create a new category to store related passwords together (e.g.,' +
+      ' games, websites, github, etc.)'
+    TabOrder = 2
+  end
+end
